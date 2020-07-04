@@ -1,0 +1,10 @@
+<apex:page >
+    
+    <apex:form >
+    
+        <apex:pageBlock title="candidateb details">
+            <apex:pageBlockSection >
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

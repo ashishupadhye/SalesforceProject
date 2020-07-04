@@ -1,0 +1,26 @@
+<apex:component controller="jobcontroller5">
+    <apex:pageBlock >
+    	<apex:pageBlockSection >
+        	<apex:repeat value="{!Data}" var="Job">
+            <ol>
+            	<apex:outputField value="{!Job.Name}"/>
+                <apex:outputField value="{!Job.Job_Name__c}"/>
+                <apex:outputField value="{!Job.Description__c}"/>
+                
+                <apex:outputField value="{!Job.Number_of_Positions__c}"/>
+                <apex:outputField value="{!Job.Expires_On__c}"/>
+                <apex:outputField value="{!Job.Salary_Offered__c}"/>
+                <apex:outputField value="{!Job.Job_Types__c}"/>
+                <apex:outputField value="{!Job.Required_Skills__c}"/>
+                <apex:outputField value="{!Job.Networking_Linux__c}"/>
+                <apex:outputField value="{!Job.Certification_Required__c}"/>
+           
+        
+                <apex:outputField value="{!Job.Active__c}"/>
+                
+        
+            </ol>
+            </apex:repeat>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:component>

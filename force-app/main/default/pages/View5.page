@@ -1,0 +1,5 @@
+<apex:page >
+    
+    <c:Detail5 >
+    </c:Detail5>
+</apex:page>

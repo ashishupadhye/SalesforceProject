@@ -1,0 +1,79 @@
+<apex:page controller="JobCustomCont" tabStyle="Job_ashish__c" applyBodyTag="true">
+    
+    <style>
+        .body
+        {
+         background-color: coral;
+        }
+    .frm
+        {
+        color:blue;
+        background-color: red;
+        }
+        .nm{color:red;}
+        .nop
+        {color:#48DE29;
+        font:60px;
+        }
+    </style>
+    <body class="body">
+        
+
+    <apex:stylesheet value="{!$Resource.st2}"/>
+ 
+    <apex:form id="frm" onmouseover="validate()" styleClass="frm">
+            <apex:pageBlock mode="edit">
+                <apex:image url="{!$Resource.st1}" width="280" height="200"/>
+
+        	      <apex:pageBlockSection title="Job Wizard">
+
+      					
+                                
+       
+                  <apex:inputField value="{!job.Name}" id="Name" styleClass="nm"/>  
+                  <apex:inputField value="{!job.Job_Name__c}" id="Namec"/>
+                  <apex:inputField value="{!job.Description__c}" id="Description"/>
+                  <apex:inputField value="{!job.Number_of_Positions__c}" id="position" styleClass="nop"/>
+                  <apex:inputField value="{!job.Expires_On__c}" id="ExpDate"/> 
+                  <apex:inputField value="{!job.Salary_Offered__c}" id="sal"/>
+                  <apex:inputField value="{!job.Job_Types__c}" id="jobtype"/>
+                  <apex:inputField value="{!job.Required_Skills__c}" id="RequiredSkill"/>
+                  <apex:inputField value="{!job.Networking_Linux__c}" id="Qualification"/>
+                  <apex:inputField value="{!job.Certification_Required__c}" id="certification"/>
+                  <apex:inputField value="{!job.Manager__c}" id="manager"/>
+                  <apex:commandButton value="Save" action="{!save}" id="btn"/>
+                      
+        
+                    
+                      <script>
+                      			function validate()
+                      				{
+                                      
+                                        //  var name=document.getElementById('{!$Component.Name}').value;
+                                        //var Namec=document.getElementById('{!$Component.Namec}').value;
+                                        //var Description=document.getElementById('{!$Component.Description}').value;
+                                        var position=document.getElementById('{!$Component.position}').value;
+                                        var ExpDate=document.getElementById('{!$Component.ExpDate}').value;
+                                        var sal=document.getElementById('{!$Component.sal}').value;
+                                        var jobtype=document.getElementById('{!$Component.jobtype}').value;
+                                        var RequiredSkill=document.getElementById('{!$Component.RequiredSkill}').value;
+                                        var Qualification=document.getElementById('{!$Component.Qualification}').value;
+                                        var certification=document.getElementById('{!$Component.certification}').value;
+                                        var manager=document.getElementById('{!$Component.manager}').value;
+                                        
+                                        if(ExpDate=="" ||ExpDate=="" ||position=="" ||sal=="" ||jobtype=="" || RequiredSkill=="" ||Qualification=="" ||certification=="" || manager=="")
+                                           {
+                                           		document.getElementById('{!$Component.btn}').disabled = true;
+                                           }
+                      					else
+                                           {
+                                                document.getElementById('{!$Component.btn}').disabled = false;    
+                                           }
+                                    }
+                          
+                      </script>
+   </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+            </body>
+</apex:page>

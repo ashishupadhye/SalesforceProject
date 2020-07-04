@@ -1,0 +1,49 @@
+<apex:page standardController="Candidate_ashish__c">
+    <apex:form > 
+ <apex:pageBlock >
+    <apex:pageBlockSection title="information" columns="1">
+   
+       
+		  <apex:inputField value="{!Candidate_ashish__c.Salutation__c}"/>  
+          <apex:inputField value="{!Candidate_ashish__c.First_Name__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.Last_Name__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.Date_of_Birth__c}"/>
+	      <apex:inputField value="{!Candidate_ashish__c.Email__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.Country__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.State__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.Application_Date__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.Status__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.Expected_Salary__c}"/>
+          <apex:inputField value="{!Candidate_ashish__c.JOB__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+        <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Update" action="{!edit}"/>
+        </apex:pageBlockButtons>
+
+
+
+
+        
+    
+ </apex:pageBlock> 
+        
+        </apex:form>
+     <apex:form > 
+         <apex:pageBlock >
+            <apex:pageBlockSection title="records" columns="1">  
+                  <apex:outputField value="{!Candidate_ashish__c.Salutation__c}"/>  
+                  <apex:outputField value="{!Candidate_ashish__c.First_Name__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.Last_Name__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.Date_of_Birth__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.Email__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.Country__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.State__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.Application_Date__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.Status__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.Expected_Salary__c}"/>
+                  <apex:outputField value="{!Candidate_ashish__c.JOB__c}"/>
+                </apex:pageBlockSection>  
+             </apex:pageBlock>         
+        </apex:form>
+</apex:page>
