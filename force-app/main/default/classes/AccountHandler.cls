@@ -6,7 +6,6 @@ public class AccountHandler
   		  acc.Name = sName;
     	try
   		 {
-               
 		   insert acc;
 
             return acc;
