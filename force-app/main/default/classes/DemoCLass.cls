@@ -6,9 +6,7 @@ public class DemoCLass {
        
         for(Job_ashish__c obj:jobLst)
         {
-          
-       
-       
+  
                 obj.Active__c=false;
             
             
